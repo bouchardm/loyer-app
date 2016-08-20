@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::resource('buildings', 'BuildingsController');
+Route::resource('apartments', 'ApartmentsController');

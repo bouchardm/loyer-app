@@ -33,7 +33,7 @@ $factory->define(App\Apartments::class, function (Faker\Generator $faker) {
     return [
         'no' => $faker->buildingNumber,
         'price' => $faker->randomFloat(2, 600, 900),
-        'buildings_id' => function() {
+        'building_id' => function() {
             return factory(\App\Buildings::class)->create()->id;
         },
     ];

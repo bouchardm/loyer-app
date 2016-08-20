@@ -38,11 +38,18 @@
                                         <td>{{ $apartment->no }}</td>
                                         <td>nom</td>
                                         <td>{{ $apartment->price }}</td>
-                                        <td><button class="btn btn-success">Detail</button></td>
+                                        <td><a href="{{ url('apartments/' . $apartment->id) }}" class="btn btn-success">Detail</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="text-right">
+                            <form action="{{ url('/apartments/create') }}" method="get">
+                                <input type="hidden" name="building_id" value="{{ $building->id }}">
+                                <button href="{{ url('/apartments/create') }}" class="btn btn-success">Ajouter</button>
+                            </form>
+
+                        </div>
                     </div>
                 </div>
             </div>
