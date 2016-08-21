@@ -11,6 +11,11 @@ use App\Http\Requests;
 
 class RentersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function create()
     {
         $apartmentId = request()->get('apartment_id');
