@@ -19,6 +19,8 @@ class CreateApartmentsTable extends Migration
             $table->double('price');
             $table->integer('buildings_id')->unsigned();
             $table->foreign('buildings_id')->references('id')->on('buildings');
+            $table->integer('renter_id')->unsigned()->nullable();
+            $table->foreign('renter_id')->references('id')->on('renter');
             $table->timestamps();
         });
     }
